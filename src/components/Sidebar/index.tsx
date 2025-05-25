@@ -12,9 +12,10 @@ interface SidebarItem {
 interface SidebarProps {
   items: SidebarItem[];
   className?: string;
+  actionSection?: React.ReactNode;
 }
 
-export function Sidebar({ items, className }: SidebarProps) {
+export function Sidebar({ items, className, actionSection }: SidebarProps) {
   const [activeSection, setActiveSection] = useState<string>("");
 
   useEffect(() => {
@@ -41,7 +42,7 @@ export function Sidebar({ items, className }: SidebarProps) {
   return (
     <div
       className={cn(
-        "w-56 bg-white border-r border-gray-200 p-4 sticky top-0",
+        "w-56 bg-white border-r border-gray-200 py-4 sticky top-0",
         className
       )}
     >
@@ -79,6 +80,7 @@ export function Sidebar({ items, className }: SidebarProps) {
           );
         })}
       </div>
+      {actionSection && <div className="mt-4">{actionSection}</div>}
     </div>
   );
 }

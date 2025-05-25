@@ -1,23 +1,22 @@
-import { AppShell, Burger } from "@mantine/core";
-import { useDisclosure } from "@mantine/hooks";
-import Header from "../../components/Header";
+import { AppShell } from "@mantine/core";
 import { Outlet } from "react-router-dom";
+import Header from "../../components/Header";
 
 export default function MainLayout() {
-  const [opened, { toggle }] = useDisclosure();
+  // const [opened, { toggle }] = useDisclosure();
 
   return (
     <AppShell
       header={{ height: 48 }}
-      navbar={{
-        width: 300,
-        breakpoint: "sm",
-        collapsed: { mobile: !opened },
-      }}
+      // navbar={{
+      //   width: 300,
+      //   breakpoint: "sm",
+      //   collapsed: { mobile: !opened },
+      // }}
     >
       <AppShell.Header px={16} mx="auto" h={48}>
         <div className="max-w-[1440px] size-full mx-auto">
-          <Burger opened={opened} onClick={toggle} hiddenFrom="sm" size="sm" />
+          {/* <Burger opened={opened} onClick={toggle} hiddenFrom="sm" size="sm" /> */}
           <Header />
         </div>
       </AppShell.Header>
