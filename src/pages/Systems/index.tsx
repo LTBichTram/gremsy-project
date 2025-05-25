@@ -113,7 +113,7 @@ export default function Systems() {
           <section
             key={item.link}
             id={item.link.replace("#", "")}
-            className="pt-12 lg:pt-24 lg:-mt-12"
+            className="pt-12 lg:py-24 lg:-my-12"
           >
             <h2 className="text-2xl font-bold mb-4">{item.label}</h2>
             {item.component}
