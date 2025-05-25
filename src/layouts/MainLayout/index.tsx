@@ -14,17 +14,20 @@ export default function MainLayout() {
         breakpoint: "sm",
         collapsed: { mobile: !opened },
       }}
-      padding="md"
     >
-      <AppShell.Header>
-        <Burger opened={opened} onClick={toggle} hiddenFrom="sm" size="sm" />
-        <Header />
+      <AppShell.Header px={16} mx="auto" h={48}>
+        <div className="max-w-[1440px] size-full mx-auto">
+          <Burger opened={opened} onClick={toggle} hiddenFrom="sm" size="sm" />
+          <Header />
+        </div>
       </AppShell.Header>
 
       {/* <AppShell.Navbar p="md">Navbar</AppShell.Navbar> */}
 
-      <AppShell.Main>
-        <Outlet />
+      <AppShell.Main px={16} mx="auto">
+        <div className="max-w-[1440px] size-full relative flex mx-auto">
+          <Outlet />
+        </div>
       </AppShell.Main>
     </AppShell>
   );

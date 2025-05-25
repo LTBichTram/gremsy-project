@@ -19,7 +19,7 @@ const menu = [
 
 export default function Header() {
   return (
-    <header className="flex items-center justify-between px-4 bg-white size-full text-sm">
+    <header className="flex items-center justify-between px-4 bg-white size-full text-sm gap-6">
       <Link to={path.home} className="flex-shrink-0 cursor-pointer">
         <img
           src={logo}
